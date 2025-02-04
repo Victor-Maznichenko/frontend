@@ -1,0 +1,26 @@
+@use 'sass:math';
+
+@mixin to($to) {
+   @media (max-width: $to) {
+      @content;
+   }
+}
+
+@mixin font-face($font-family, $weight, $weightStr, $style) {
+   @font-face {
+      font-family: $font-family;
+      font-style: $style;
+      font-weight: $weight;
+      src:
+         url('/fonts/woff2/' + $font-family + '-' + $weightStr + '.woff2') format('woff2'),
+         url('/fonts/woff/' + $font-family + '-' + $weightStr + '.woff') format('woff');
+   }
+}
+
+@mixin keyframes-text-glitch($steps: 40) {
+   @for $i from 0 through $steps {
+      #{math.percentage($i * math.div(1, $steps))} {
+         clip-path: inset(#{math.random(100)} + '%' 0 #{math.random(100)} + '%' 0);
+      }
+   }
+}

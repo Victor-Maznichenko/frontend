@@ -1,0 +1,47 @@
+.intro {
+   position: relative;
+   padding: 4.5rem 0 8.25rem;
+
+   &__inner {
+      display: flex;
+      column-gap: 8rem;
+      align-items: flex-start;
+   }
+
+   &__info {
+      max-width: 38rem;
+   }
+
+   &__title {
+      margin-bottom: 1.5rem;
+   }
+
+   &__description {
+      max-width: 22.25rem;
+      margin-bottom: 5.625rem;
+   }
+
+   &__benefits {
+      display: flex;
+      column-gap: 2rem;
+   }
+
+   &__decorationLine {
+      position: absolute;
+      bottom: -3.25rem;
+      opacity: 0.3;
+      left: 0;
+
+      path {
+         stroke-dasharray: 1000;
+         stroke-dashoffset: 1000;
+         animation: dash 3s linear forwards;
+
+         @keyframes dash {
+            to {
+               stroke-dashoffset: 0;
+            }
+         }
+      }
+   }
+}

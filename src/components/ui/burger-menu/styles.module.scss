@@ -1,0 +1,13 @@
+.burgerMenu {
+   &__icon {
+      width: 3.5rem;
+      opacity: 1;
+      fill: none;
+      stroke: #f3f2f9;
+      stroke-width: 2px;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+      display: block;
+   }
+}

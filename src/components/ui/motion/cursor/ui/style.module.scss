@@ -1,0 +1,40 @@
+.cursor {
+   pointer-events: none;
+   position: absolute;
+   width: 100vw;
+   height: 100dvh;
+
+   &,
+   &Action,
+   &ActionWrap,
+   &Outline,
+   &Dot {
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+   }
+
+   &ActionWrap,
+   &Outline,
+   &Dot {
+      position: fixed;
+      z-index: 10000;
+      mix-blend-mode: difference;
+      aspect-ratio: 1;
+   }
+
+   &Outline {
+      border: 0.125rem solid var(--base-cursor-color);
+   }
+
+   &Dot {
+      background-color: var(--base-cursor-color);
+   }
+
+   &Action {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+   }
+}

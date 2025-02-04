@@ -1,0 +1,39 @@
+@use 'sass:math';
+@use 'mixins' as *;
+
+/* ==== Background noise ==== */
+@keyframes noise-grain {
+   0%,
+   100% {
+      transform: translate(0); // Возврат к начальному положению
+   }
+
+   @for $i from 1 through 9 {
+      #{($i * 10) + '%'} {
+         transform: translate(#{math.random(30) - 15} + '%', #{math.random(30) - 15} + '%');
+      }
+   }
+}
+
+/* ==== Component mount ==== */
+@keyframes mount {
+   0% {
+      scale: 0.85;
+      opacity: 0;
+      pointer-events: none;
+   }
+   100% {
+      scale: 1;
+      opacity: 1;
+      pointer-events: auto;
+   }
+}
+
+/* ==== Text Glitch ==== */
+@keyframes glitch-text-before {
+   @include keyframes-text-glitch();
+}
+
+@keyframes glitch-text-after {
+   @include keyframes-text-glitch();
+}

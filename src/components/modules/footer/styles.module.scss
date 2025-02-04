@@ -1,0 +1,15 @@
+.footer {
+   padding: 3rem 0;
+
+   &__contacts {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      max-width: 38rem;
+      row-gap: 1rem;
+
+      a {
+         display: inline-block;
+         text-decoration: underline;
+      }
+   }
+}
