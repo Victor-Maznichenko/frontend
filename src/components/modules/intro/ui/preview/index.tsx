@@ -1,13 +1,13 @@
 /* eslint-disable react/no-array-index-key */
 'use client';
 
-import type { ComponentProps } from 'react';
-import { Icons, MotionImage, Typography } from '@/components/ui';
 import clsx from 'clsx';
+import type { ComponentProps } from 'react';
 import { motion } from 'motion/react';
 import { useState } from 'react';
-import styles from './styles.module.scss';
+import { Icons, MotionImage, Typography } from '@/components/ui';
 import { AnimationStatus, PREVIEW_ANIMATIONS } from './utils';
+import styles from './styles.module.scss';
 
 interface IntroPreviewProps extends Omit<ComponentProps<typeof motion.div>, 'children'> {
    src: string;

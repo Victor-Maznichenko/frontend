@@ -1,7 +1,7 @@
 @use 'sass:math';
 
 @mixin to($to) {
-   @media (max-width: $to) {
+   @media (max-width: #{$to}px) {
       @content;
    }
 }

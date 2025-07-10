@@ -4,8 +4,10 @@
 
    &__inner {
       display: flex;
-      column-gap: 8rem;
+      column-gap: 2rem;
       align-items: flex-start;
+      justify-content: space-between;
+      padding-right: 85px;
    }
 
    &__info {

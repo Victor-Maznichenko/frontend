@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from 'next';
+import type { Metadata } from 'next';
 import { Footer } from '@/components/modules/footer';
 import { Header } from '@/components/modules/header';
 import { Cursor } from '@/components/ui/motion/cursor';
@@ -23,12 +23,6 @@ const fontRoboto = Roboto({
    subsets: ['latin', 'cyrillic'],
    fallback: ['Tahoma', 'Trebuchet MS', 'Arial'],
 });
-
-export const viewport: Viewport = {
-   initialScale: 1,
-   width: 1450,
-   height: 900,
-};
 
 export const metadata: Metadata = {
    title: 'Victor Maznichenko✌️🤘',

@@ -1,6 +1,7 @@
 @use 'variables' as *;
 @use 'keyframes' as *;
 @use 'mixins' as *;
+@use 'root' as *;
 
 * {
    margin: 0;
@@ -15,20 +16,20 @@
 }
 
 html {
-   --site-scale: calc(100vw / var(--desktop));
+   --site-scale: 100vw / #{$desktop};
 
-   font-size: calc(var(--site-scale) * #{16});
+   font-size: calc((var(--site-scale)) * #{16});
 
-   @include to(var(--lg)) {
-      --site-scale: calc(100vw / var(--lg));
+   @include to($lg) {
+      --site-scale: 100vw / #{$lg};
    }
 
-   @include to(var(--tablet)) {
-      --site-scale: calc(100vw / var(--tablet));
+   @include to($tablet) {
+      --site-scale: 100vw / #{$tablet};
    }
 
-   @include to(var(--mobile)) {
-      --site-scale: calc(100vw / var(--mobile));
+   @include to($mobile) {
+      --site-scale: 100vw / #{$mobile};
    }
 }
 
