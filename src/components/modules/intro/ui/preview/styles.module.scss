@@ -11,6 +11,15 @@
 
    @include to($tablet) {
       top: initial;
+      overflow: hidden;
+      max-width: 19rem;
+      border-radius: 2rem;
+   }
+
+   &__decorations {
+      @include to($tablet) {
+         display: none;
+      }
    }
 
    img {
@@ -25,18 +34,22 @@
       overflow: hidden;
    }
 
-   &::after,
+   &__square,
    &Mask {
       width: 100%;
       position: absolute;
    }
-   &::after {
+   &__square {
       content: '';
       z-index: -2;
       right: -1.875rem;
       bottom: -2.75rem;
       border: 0.125rem solid var(--base-text-color);
       aspect-ratio: 340/318;
+
+      @include to($tablet) {
+         display: none;
+      }
    }
 
    &Mask {

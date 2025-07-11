@@ -35,7 +35,8 @@ export const IntroPreview = ({ src, className, ...props }: IntroPreviewProps) =>
                {...PREVIEW_ANIMATIONS.image}
             />
          </div>
-         <div className={styles.introPreview__}>
+         <div className={styles.introPreview__decorations}>
+            <div className={styles.introPreview__square} />
             <Typography className={styles.introPreview__firstName} as="span" variant="text_L">Виктор</Typography>
             <Typography className={styles.introPreview__lastName} as="span" variant="text_L">Мазниченко</Typography>
             {isLoad && PREVIEW_ANIMATIONS.squareGrids.map((animation, index) => (

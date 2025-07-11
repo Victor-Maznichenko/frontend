@@ -5,6 +5,10 @@
    position: relative;
    padding: 5rem 0;
 
+   @include to($tablet) {
+      padding: 2rem 0;
+   }
+
    &__inner {
       display: flex;
       column-gap: 2rem;
@@ -15,7 +19,7 @@
       @include to($tablet) {
          padding-right: 0;
          flex-direction: column-reverse;
-         gap: 2rem;
+         gap: 1rem;
       }
    }
 
@@ -53,12 +57,6 @@
                stroke-dashoffset: 0;
             }
          }
-      }
-   }
-
-   &__preview {
-      @include to($tablet) {
-         display: none;
       }
    }
 }
