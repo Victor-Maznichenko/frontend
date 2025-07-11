@@ -1,4 +1,6 @@
+@use '@/assets/styles/mixins' as *;
 @use '@/assets/styles/keyframes' as *;
+@use '@/assets/styles/variables' as *;
 
 .heading_L,
 .heading_M,
@@ -23,6 +25,10 @@
    font-size: 5.25rem;
    font-weight: 700;
    line-height: 105%;
+
+   @include to($mobile) {
+      font-size: 4.25rem;
+   }
 }
 
 .heading_M {

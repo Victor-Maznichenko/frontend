@@ -1,10 +1,17 @@
+@use '@/assets/styles/mixins' as *;
+@use '@/assets/styles/variables' as *;
+
 .introPreview {
-   max-width: 20rem;
+   max-width: 24rem;
    position: relative;
    display: inline-block;
    background-color: rgba(#fff, 0.7);
    z-index: 1;
    top: -32px;
+
+   @include to($tablet) {
+      top: initial;
+   }
 
    img {
       display: block;

@@ -28,6 +28,7 @@ export default antfu(
          ...nextPlugin.configs.recommended.rules,
          ...nextPlugin.configs['core-web-vitals'].rules,
          'node/prefer-global/process': ['error', 'always'],
+         'perfectionist/sort-imports': 0,
       },
    },
 );

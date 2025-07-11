@@ -35,28 +35,30 @@ export const IntroPreview = ({ src, className, ...props }: IntroPreviewProps) =>
                {...PREVIEW_ANIMATIONS.image}
             />
          </div>
-         <Typography className={styles.introPreview__firstName} as="span" variant="text_L">Виктор</Typography>
-         <Typography className={styles.introPreview__lastName} as="span" variant="text_L">Мазниченко</Typography>
-         {isLoad && PREVIEW_ANIMATIONS.squareGrids.map((animation, index) => (
-            <Icons.SquareGrid
-               as={motion.svg}
-               animate={isLoad}
-               key={`squareGrid-${index}`}
-               className={clsx(styles[`introPreview__squareGrid${index + 1}`])}
-               size={150}
-               {...animation}
-            />
-         ))}
-         {isLoad && PREVIEW_ANIMATIONS.zigzagLines.map((animation, index) => (
-            <Icons.ZigzagLine
-               as={motion.svg}
-               animate={isLoad}
-               key={`zigzagLine-${index}`}
-               className={clsx(styles[`introPreview__zigzagLine${index + 1}`])}
-               size={51}
-               {...animation}
-            />
-         ))}
+         <div className={styles.introPreview__}>
+            <Typography className={styles.introPreview__firstName} as="span" variant="text_L">Виктор</Typography>
+            <Typography className={styles.introPreview__lastName} as="span" variant="text_L">Мазниченко</Typography>
+            {isLoad && PREVIEW_ANIMATIONS.squareGrids.map((animation, index) => (
+               <Icons.SquareGrid
+                  as={motion.svg}
+                  animate={isLoad}
+                  key={`squareGrid-${index}`}
+                  className={clsx(styles[`introPreview__squareGrid${index + 1}`])}
+                  size={150}
+                  {...animation}
+               />
+            ))}
+            {isLoad && PREVIEW_ANIMATIONS.zigzagLines.map((animation, index) => (
+               <Icons.ZigzagLine
+                  as={motion.svg}
+                  animate={isLoad}
+                  key={`zigzagLine-${index}`}
+                  className={clsx(styles[`introPreview__zigzagLine${index + 1}`])}
+                  size={51}
+                  {...animation}
+               />
+            ))}
+         </div>
       </motion.div>
    );
 };

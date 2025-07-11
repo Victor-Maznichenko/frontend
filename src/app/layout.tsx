@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
+import { JetBrains_Mono, Roboto } from 'next/font/google';
 import { Footer } from '@/components/modules/footer';
 import { Header } from '@/components/modules/header';
 import { Cursor } from '@/components/ui/motion/cursor';
-import { JetBrains_Mono, Roboto } from 'next/font/google';
 import '@/assets/styles/index.scss';
 
 /* TODO: Разобраться с шрифтами в Next.js, почему они у меня кривые? */
@@ -40,7 +40,7 @@ function RootLayout({
             className={`${fontJetbrainsMono.className} ${fontRoboto.variable}`}
          >
             <Header />
-            <main className="main">{children}</main>
+            {children}
             <Footer />
             <Cursor />
          </body>

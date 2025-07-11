@@ -2,10 +2,10 @@ import { Intro } from '@/components/modules/intro';
 
 const HomePage = () => {
    return (
-      <div>
+      <main>
          <div className="noise" />
          <Intro />
-      </div>
+      </main>
    );
 };
 

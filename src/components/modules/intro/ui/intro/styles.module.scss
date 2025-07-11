@@ -1,6 +1,9 @@
+@use '@/assets/styles/mixins' as *;
+@use '@/assets/styles/variables' as *;
+
 .intro {
    position: relative;
-   padding: 4.5rem 0 8.25rem;
+   padding: 5rem 0;
 
    &__inner {
       display: flex;
@@ -8,6 +11,12 @@
       align-items: flex-start;
       justify-content: space-between;
       padding-right: 85px;
+
+      @include to($tablet) {
+         padding-right: 0;
+         flex-direction: column-reverse;
+         gap: 2rem;
+      }
    }
 
    &__info {
@@ -44,6 +53,12 @@
                stroke-dashoffset: 0;
             }
          }
+      }
+   }
+
+   &__preview {
+      @include to($tablet) {
+         display: none;
       }
    }
 }

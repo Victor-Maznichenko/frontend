@@ -1,5 +1,5 @@
-import { requests } from '@/utils/api';
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { requests } from '@/utils/api';
 
 const initialState: Api.IntroResponse = {
    title: '',

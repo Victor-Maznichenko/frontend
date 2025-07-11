@@ -1,7 +1,18 @@
+@use '@/assets/styles/mixins' as *;
+@use '@/assets/styles/variables' as *;
+
 .header {
    width: 100%;
    display: flex;
    align-items: center;
    justify-content: space-between;
-   padding: 3rem 5rem 1rem;
+   padding: 1rem 5rem;
+
+   @include to($lg) {
+      padding: 1rem;
+   }
+
+   &__logo {
+      width: 5rem;
+   }
 }

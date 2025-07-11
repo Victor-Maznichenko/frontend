@@ -1,8 +1,8 @@
 'use client';
 
+import { motion } from 'motion/react';
 import { Icons, Typography } from '@/components/ui';
 import { staggerInView } from '@/utils/constants/motion-animation-props';
-import { motion } from 'motion/react';
 import { IntroPreview } from '../preview';
 import styles from './styles.module.scss';
 
@@ -42,7 +42,7 @@ export const Intro = () => {
                   </motion.div>
                </div>
 
-               <IntroPreview src="/images/avatar.jpg" />
+               <IntroPreview className={styles.intro__preview} src="/images/avatar.jpg" />
             </div>
          </div>
          <Icons.IntroDecorationLine className={styles.intro__decorationLine} />
